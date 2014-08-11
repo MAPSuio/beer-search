@@ -1,0 +1,61 @@
+div
+{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    display: block;
+}
+
+img
+{
+    height: 100px;
+    width: 100px;
+}
+
+h1, h3
+{
+    margin: 0px;
+    line-height: 39px;
+    vertical-align: middle;
+}
+
+.left
+{
+    text-align: left;
+}
+
+.right
+{
+    text-align: right;
+}
+
+.weigh
+{
+    line-height: 39px;
+    vertical-align: middle;
+}
+
+#headline
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#cans
+{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#buttons
+{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#weighs
+{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

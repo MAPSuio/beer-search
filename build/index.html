@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<title>Beer</title>
+</head>
+<body ng-app="BeerSearch">
+<div id="main" ng-controller="BeerController">
+    <div class="container">
+        <div class="row" id="headline">
+            <div class="col-md-12 centered">
+                <h1>Find the opened beer can!</h1>
+            </div>
+        </div>
+        <div class="row" id="cans">
+            <div class="col-md-12">
+                <div class="btn-group btn-group-lg">
+                    <div class="btn btn-default {{ can.selected ? 'btn-primary' : '' }}"
+                        ng-repeat="can in cans" ng-click="can.selected = !can.selected">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="img/heineken.png" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                {{ can.label }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="buttons">
+            <div class="col-md-12">
+                <div class="btn-group btn-group-lg">
+                    <div class="btn btn-success centered" ng-click="weigh()">
+                        <h1>Weigh</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="weighs">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="list-group">
+                    <div class="list-group-item" ng-repeat="(key, weigh) in weighs">
+                        <div class="row weigh">
+                            <div class="col-md-2 left">
+                                <h1>{{ key + 1 }}.</h1>
+                            </div>
+                            <div class="col-md-10 right">
+                                <h3>{{ weigh | canSumLabel }} {{ weigh | totalWeight }}</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/bundle.js"></script>
+</body>
+</html>
